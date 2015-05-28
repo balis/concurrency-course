@@ -1,1 +1,1 @@
-# concurrency-course
+Example code for the web crawler assignment.
