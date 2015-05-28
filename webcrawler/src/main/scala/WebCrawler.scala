@@ -6,13 +6,13 @@ object WebCrawler extends App {
   import java.net.URL
 
   val url = "http://google.com"
-  val html = Source.fromURL(url)
+  //val html = Source.fromURL(url)
 
   val cleaner = new HtmlCleaner
   val props = cleaner.getProperties
 
-  val rootNode = cleaner.clean(html.mkString) 
-  // mozna tez od razu z URLa: cleaner.clean(new URL(url))
+  //val rootNode = cleaner.clean(html.mkString) 
+  val rootNode = cleaner.clean(new URL(url))
 
   val elements = rootNode.getElementsByName("a", true) 
   elements map { elem => 
