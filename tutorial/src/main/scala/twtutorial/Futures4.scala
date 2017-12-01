@@ -6,6 +6,12 @@ import ExecutionContext.Implicits.global
 import scala.util.{ Success, Failure }
 import scala.util.Random
 
+
+// Further reading:
+// 1. Utilities from Future companion object: https://www.scala-lang.org/api/current/scala/concurrent/Future$.html
+//    - E.g. 'Future.sequence' converts a collection of futures into one future for that collection 
+// 2. More about composing futures: http://rerun.me/2016/06/12/scala-futures-3-combinators-and-async/
+
 object Futures4 extends App {
 
   def asyncWork(n: Int): Future[Int] = Future {
