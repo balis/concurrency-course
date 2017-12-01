@@ -17,7 +17,8 @@ object Futures3 extends App {
   val f1 = asyncPrint(1)
   val f2 = asyncPrint(2)
   val f3 = asyncPrint(3)
+
+  // Exercise: ensure that 1,2,3 are written in order using combinators (see Futures4.scala)
   
   Thread.sleep(20000)
-  //Await.result(futureL, 2 seconds)
 }
