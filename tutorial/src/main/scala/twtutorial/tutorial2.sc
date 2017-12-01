@@ -1,5 +1,5 @@
-object tutorial2 {;import org.scalaide.worksheet.runtime.library.WorksheetSupport._; def main(args: Array[String])=$execute{;$skip(62); 
-  println("Welcome to the Scala worksheet");$skip(342); val res$0 = 
+object tutorial2 {
+  println("Welcome to the Scala worksheet")       //> Welcome to the Scala worksheet
 
   ////////////////
   // 1. Classes //
@@ -14,7 +14,7 @@ object tutorial2 {;import org.scalaide.worksheet.runtime.library.WorksheetSuppor
 
     val r1 = new Rational(1, 2)
     r1.numer
-  }
+  }                                               //> res0: Int = 1
 
   // Let's add a few methods to this class:
   class Rational(val numer: Int, val denom: Int) {
@@ -25,20 +25,20 @@ object tutorial2 {;import org.scalaide.worksheet.runtime.library.WorksheetSuppor
     // adds two Rational numbers and returns a new Rational which represents the sum
     def add(that: Rational) =
       new Rational(
-        this.numer * that.denom + that.denom * this.denom,
+        this.numer * that.denom + that.numer * this.denom,
         this.denom * that.denom)
 
     override def toString = numer + "/" + denom
-  };System.out.println("""res0: Int = """ + $show(res$0));$skip(496); 
+  }
 
-  val r1 = new Rational(2);System.out.println("""r1  : tutorial2.Rational = """ + $show(r1 ));$skip(30); 
-  val r2 = new Rational(3, 4);System.out.println("""r2  : tutorial2.Rational = """ + $show(r2 ));$skip(246); val res$1 = 
+  val r1 = new Rational(2)                        //> r1  : tutorial2.Rational = 2/1
+  val r2 = new Rational(3, 4)                     //> r2  : tutorial2.Rational = 3/4
 
   // all two-argument functions can be written in an infix notation
   // "r1.add(r2)" is equivalent to "r1 add r2"
   // in fact method "add" could be named "+" because it is a valid identifier!
   // -> please make this modification
-  r1 add r2
+  r1 add r2                                       //> res1: tutorial2.Rational = 11/4
 
   ////////////////////////////////////
   // 2. Abstract classes and traits //
@@ -69,13 +69,10 @@ object tutorial2 {;import org.scalaide.worksheet.runtime.library.WorksheetSuppor
         new NonEmpty((x :: elements).sorted)
 
     override def toString = elements mkString ","
-  };System.out.println("""res1: tutorial2.Rational = """ + $show(res$1));$skip(854); 
+  }
 
-  val s1 = new NonEmpty(1);System.out.println("""s1  : tutorial2.NonEmpty = """ + $show(s1 ));$skip(21); 
-  val s2 = s1 incl 2;System.out.println("""s2  : tutorial2.NonEmpty = """ + $show(s2 ));$skip(21); 
-  val s3 = s2 incl 1;System.out.println("""s3  : tutorial2.NonEmpty = """ + $show(s3 ))}
-
-// Exercise 1: implement methods "union", "intersect" and "diff" that return a new set which
-// represents union, intersection, and difference of two sets.
+  val s1 = new NonEmpty(1)                        //> s1  : tutorial2.NonEmpty = 1
+  val s2 = s1 incl 2                              //> s2  : tutorial2.IntSet = 1,2
+  val s3 = s2 incl 1                              //> s3  : tutorial2.IntSet = 1,2
 
 }
