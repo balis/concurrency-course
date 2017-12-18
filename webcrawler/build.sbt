@@ -2,7 +2,7 @@ name := "WebCrawler"
 
 version := "1.0"
 
-scalaVersion := "2.11.6"
+scalaVersion := "2.12.3"
 
 libraryDependencies += 
-        "net.sourceforge.htmlcleaner" % "htmlcleaner" % "2.12"
+        "net.sourceforge.htmlcleaner" % "htmlcleaner" % "2.21"
