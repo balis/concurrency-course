@@ -4,6 +4,7 @@ import scala.concurrent.{Future}
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.util.{Failure, Success}
 import scala.util.Random
+import scala.language.postfixOps
 
 object Futures2 extends App {
 
@@ -20,7 +21,7 @@ object Futures2 extends App {
     }
     
     // other work
-    println("A ..."); Thread.sleep(100);
+    println("A ..."); Thread.sleep(100)
     println("B ..."); Thread.sleep(100)
     println("C ..."); Thread.sleep(100)
     

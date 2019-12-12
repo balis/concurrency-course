@@ -1,4 +1,3 @@
-object tutorial {
   println("Welcome to the Scala worksheet")       //> Welcome to the Scala worksheet
 
   //////////////////////////////////
@@ -86,4 +85,3 @@ object tutorial {
                                                   //> res5: Int = 10
   mapReduceG[String](x => x.capitalize, (x, y) => x concat y, "")(List("a", "b", "c", "d"))
                                                   //> res6: String = ABCD
-}

@@ -3,6 +3,7 @@ package twtutorial
 import scala.concurrent.{Await, Future}
 import scala.concurrent.duration._
 import scala.concurrent.ExecutionContext.Implicits.global
+import scala.language.postfixOps
 
 // Documentation: http://www.scala-lang.org/api/current/scala/concurrent/index.html
 
